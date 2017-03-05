@@ -1,0 +1,89 @@
+.nb-login {
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 20px 25px;
+    border-radius: 2px;
+}
+
+.nb-login h3 {
+    font-size: 13px;
+    line-height: 13px;
+    margin: 15px 0px 25px 0px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.nb-login form {
+    margin-bottom: 15px;
+    color: black;
+}
+
+.nb-login form input,
+.nb-login form textarea {
+    box-shadow: none !important;
+    padding: 6px 5px;
+    color: black;
+    border: 0px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    border-radius: 0px;
+}
+
+.nb-login form input:focus {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nb-login form ::-webkit-input-placeholder {
+    color: black;
+}
+
+.nb-login form ::-moz-placeholder {
+    color: black;
+}
+
+.nb-login form :-ms-input-placeholder {
+    color: black;
+}
+
+.nb-login form .btn {
+    border: 0px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: transparent;
+    margin-top: 15px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nb-login form .btn:hover {
+    background: black;
+    color: black;
+}
+
+.nb-login .social a {
+    display: block;
+    margin-bottom: 15px;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nb-login .center {
+    text-align: center;
+}
+
+.nb-login .or {
+    color: black;
+}

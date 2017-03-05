@@ -1,0 +1,148 @@
+/*FONT FACE*/
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "OpenSansBold";
+    src: url('fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: "OpenSansLight";
+    src: url('fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: "OpenSansSemiBold";
+    src: url('fonts/OpenSans-Semibold.ttf');
+}
+
+@font-face {
+    font-family: "OpenSansLight";
+    src: url('fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: "Tomahawk";
+    src: url('fonts/Tomahawk.ttf');
+}
+
+/*HEADER*/
+
+#header {
+    background: url('../img/header.png') no-repeat;
+    background-size: 100% 100%;
+    min-height: 450px;
+}
+
+#header span {
+    font-family: "OpenSansBold";
+    color: white;
+}
+
+#header h1 {
+    font-family: "Tomahawk";
+    color: white;
+}
+
+#header a {
+    font-family: "OpenSansBold";
+    color: white;
+}
+
+#header button {
+    margin-top: 10px;
+    color: white;
+    border-color: white;
+}
+
+#welcome, #beers, #most-wanted {
+    padding-top: 30px;
+}
+
+#img-beer {
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+/*SEARCH PART*/
+
+#search-div {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#beer {
+    text-align: center;
+    outline: 1px groove #f2f2f2;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#beer-name {
+    font-family: "OpenSansBold";
+    margin-top: 10px;
+}
+
+#beer-price {
+    font-family: "OpenSansLight";
+    margin-top: 10px;
+}
+
+#beer-image {
+    height: 150px;
+    margin-top: 20px;
+}
+
+#beer-discover {
+    font-family: "Tomahawk";
+}
+
+#circle-plus {
+    color: #f9b726;
+    padding-bottom: 15px;
+}
+
+/*NEWSLETTER*/
+
+#newsletter {
+    background: url('../img/newsletter.png') no-repeat;
+    background-size: 100% 100%;
+    min-height: 300px;
+    text-align: center;
+}
+
+#newsletter a {
+    color: white;
+}
+
+
+#newsletter button {
+    margin-top: 10px;
+    color: white;
+    border-color: white;
+}
+
+#newsletter-title {
+    font-family: "Tomahawk";
+    color: white;
+}
+
+#footer h1 {
+    font-family: "OpenSansBold";
+    font-size: medium;
+    margin-bottom: 15px;
+}
+
+#footer h2 {
+    font-family: "OpenSansLight";
+    font-size: small;
+}
+
+#footer p {
+    font-family: "OpenSansLight";
+    font-size: small;
+}

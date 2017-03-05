@@ -1,0 +1,174 @@
+<div ng-controller="beerController">
+
+    <!-- HEADER -->
+
+    <div id="header" class="jumbotron jumbotron-fluid">
+
+        <!-- Line 1 -->
+
+        <div class="row">
+            <div id="img-logo" class="col-lg-2 offset-2">
+                <img src="img/logo.png">
+            </div>
+            <div id="welcome" class="col-lg-2 offset-2">
+                <span>Acceuil</span>
+            </div>
+            <div id="beers" class="col-lg-2">
+                <span>Toutes nos bières</span>
+            </div>
+            <div id="most-wanted" class="col-lg-2">
+                <span>Les plus commandées</span>
+            </div>
+        </div>
+
+        <!-- Line 2 -->
+
+        <div class="row">
+            <div id="img-beer" class="col-lg-2 offset-2">
+                <img src="img/viru.png">
+            </div>
+            <div class="col-lg-4">
+                <div>
+                    <h1>Cap sur l'Estonie</h1>
+                </div>
+                <div>
+                    <a>
+                        Brassée et mise en bouteille en Estobie utilisant de l'orge et du houblon
+                        Saaz Lituanien pour produire une biere rafraichissante. Un breuvage agréable et bien équilibré
+                        avec une douce note de vanille.
+                    </a>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-secondary">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH -->
+
+    <div id="beer-discover" class="text-center">
+        <h1>
+            DECOUVREZ NOS BIERES
+        </h1>
+        <br>
+    </div>
+
+    <form ng-submit="search()">
+        <div class="container">
+            <div class="row" id="search-div">
+                <div class="col-lg-3">
+                    <select class="form-control" ng-model="defaultCountry" ng-change="setCountry(defaultCountry)">
+                        <option ng-selected="{{country == defaultCountry}}" ng-repeat="country in allCountries"
+                                value="{{country}}">
+                            {{country}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <select class="form-control" ng-model="defaultColor" ng-change="setColor(defaultColor)">
+                        <option ng-selected="{{color == defaultColor}}" ng-repeat="color in allColors"
+                                value="{{color}}">
+                            {{color}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <select class="form-control" ng-model="defaultStrenght" ng-change="setStrenght(defaultStrenght)">
+                        <option ng-selected="{{strenght == defaultStrenght}}" ng-repeat="strenght in allStrenghts"
+                                value="{{strenght}}">
+                            {{strenght}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <button class="btn btn-warning" type="submit">Rechercher</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <div class="row" ng-repeat="beers in allBeers | groupBy:4">
+            <div id="beer" class="col-lg-3" ng-repeat="beer in beers">
+                <div id="beer-name">{{ beer.name }}</div>
+                <hr width="10%"/>
+                <div id="beer-price">{{ beer.price }}€</div>
+                <div><img ng-src="{{beer.imgUrl}}" class="img-fluid" id="beer-image"/></div>
+                <i id="circle-plus" class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- NEWSLETTER -->
+
+    <div id="newsletter" class="jumbotron jumbotron-fluid">
+        <div id="newsletter-title" class="text-center">
+            <h1>
+                NEWSLETTER
+            </h1>
+        </div>
+        <div>
+            <a>
+                Soyez le premier au courant de nos derniers arrivages et promotions!
+            </a>
+        </div>
+        <div>
+            <a>
+                Inscrivez-vous à notre newsletter pour ne rien rater :
+            </a>
+        </div>
+        <div>
+            <button class="btn btn-outline-secondary">Votre addresse mail</button>
+        </div>
+    </div>
+
+    <!--FOOTER -->
+
+    <div id="footer" class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h1>Langues</h1>
+                <h2>Français</h2>
+                <h2>English</h2>
+                <h2>German</h2>
+                <h2>Spanish</h2>
+            </div>
+            <div class="col-lg-3">
+                <h1>A propos</h1>
+                <h2>Qui sommes-nous ?</h2>
+                <h2>L'équipe</h2>
+                <h2>Jobs</h2>
+                <h2>Mentions légales</h2>
+            </div>
+            <div class="col-lg-3">
+                <h1>Service Client</h1>
+                <h2>Nous contacter</h2>
+                <h2>Conditions générales de vente</h2>
+                <h2>Conditions de livraison</h2>
+                <h2>F.A.Q</h2>
+            </div>
+            <div class="col-lg-3">
+                <h1>Plan du site</h1>
+                <h2>Accueil</h2>
+                <h2>Toutes nos bières</h2>
+                <h2>Les plus commandées</h2>
+                <h2>Mon panier</h2>
+            </div>
+        </div>
+        <hr width="100%"/>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="img/logo_footer.png">
+            </div>
+            <div class="col-lg-9">
+                <p>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTE, A CONSOMMER AVEC MODERATION.</p>
+                <br>
+                <p>LA CONSOMMATION D'ALCCOL EST VIVEMENT DECONSEILLEE AUX FEMMES ENCEINTES.</p>
+                <p>LA VENTE D'ALCOOL A DES MINEURS INTERDITE, EN ACCEDANT A NOS OFFRES, VOUS DECLAREZ AVOIR 18 ANS
+                    REVOLUS.</p>
+            </div>
+        </div>
+    </div>
+</div>
